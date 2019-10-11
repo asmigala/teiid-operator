@@ -49,7 +49,7 @@ Use the OLM console to subscribe to the `Teiid Operators` Operator Catalog Sourc
 Before we deploy Virtual Database for example below, one needs a database for it to connect to. Use below command to create `Postgresql` database. You can skip the step if you already have a database you are working with.
 
 ```shell
-$ oc new-app -e POSTGRESQL_USER=user -e POSTGRESQL_PASSWORD=mypassword -e POSTGRESQL_DATABASE=sampledb postgresql:9.5
+$ oc new-app -e POSTGRESQL_USER=user -e POSTGRESQL_PASSWORD=mypassword -e POSTGRESQL_DATABASE=sampledb --context-dir samples/postgresql postgresql:9.5
 ```
 
 Once the above database is provisioned, we need to setup some sample schema and data for this example. For that find, find the pod that `Postgresql` deployed as
